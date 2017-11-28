@@ -9,9 +9,11 @@ tests_dir = os.path.dirname(os.path.realpath(__file__))
 
 
 tptester.tp_test(
-  itertools.product(
-    [ 500, 700, 1000, 1200, 1500, 1800, 2000 ],
-    [ 5, 10, 20, 25, 50 ]
+  list(
+    itertools.product(
+      [ 500, 700, 1000, 1200, 1500, 1800, 2000 ],
+      [ 5, 10, 20, 25, 50 ]
+    )
   ),
   
   os.getcwd() + '/' + sys.argv[1],
